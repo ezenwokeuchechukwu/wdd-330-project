@@ -1,15 +1,23 @@
-export function loadHeader() {
+export function renderHeader() {
   const header = document.createElement('header');
+  header.className = 'main-header';
+
   header.innerHTML = `
-    <nav class="navbar">
-      <a href="dashboard.html" class="logo">UC Ride</a>
-      <ul class="nav-links">
-        <li><a href="dashboard.html">Dashboard</a></li>
-        <li><a href="ride-history.html">Ride History</a></li>
-        <li><a href="support.html">Support</a></li>
-        <li><a href="login.html">Logout</a></li>
-      </ul>
+    <div class="logo">UC Ride</div>
+    <nav class="nav-links">
+      <button id="signinBtn">Sign In</button>
+      <button id="accountBtn">My Account</button>
     </nav>
   `;
+
   document.body.prepend(header);
+
+  // Example: Alert placeholders (replace with modal or auth logic)
+  document.getElementById('signinBtn').addEventListener('click', () => {
+    alert('🔐 Sign In button clicked. Implement auth here.');
+  });
+
+  document.getElementById('accountBtn').addEventListener('click', () => {
+    alert('👤 Account section clicked. Load user dashboard or profile.');
+  });
 }
