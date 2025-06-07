@@ -1,8 +1,8 @@
-import { renderHeader } from './components/Header.js';
-import { renderFooter } from './components/Footer.js';
-import { renderRideForm } from './components/rideCard.js';
-import { loadGoogleMap } from './components/map.js';
-import { fetchRideData } from './components/rideData.js';
+import { renderHeader } from './src/components/header.js';
+import { renderFooter } from './src/components/Footer.js';
+import { renderRideForm } from './src/components/rideCard.js';
+import { loadGoogleMap } from './src/components/map.js';
+import { fetchRideData } from './src/components/rideData.js';
 
 // ✅ Environment variables
 const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
