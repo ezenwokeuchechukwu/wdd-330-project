@@ -1,4 +1,4 @@
-import { renderHeader } from './components/header.js';
+import { renderHeader } from './components/Header.js';
 import { renderFooter } from './components/Footer.js';
 import { renderRideForm } from './components/rideCard.js';
 import { loadGoogleMap } from './components/map.js';
