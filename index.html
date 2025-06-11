@@ -1,27 +1,69 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <title>UC Ride</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="uc-ride/src/main.js" type="module"></script>
-  </head>
-    <div id="app">
-      <header>
-        <h1>Welcome To UC Ride</h1>
-      </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UC Ride</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ✅ Header -->
+  <header class="main-header">
+    <div class="logo">UC Ride</div>
+    <nav class="nav-links">
+      <button>Home</button>
+      <button>Book Ride</button>
+      <button>History</button>
+      <button>Support</button>
+      <button>Notification</button>
+      <button>Profile</button>
+    </nav>
+  </header>
 
-      <div id="map"></div>
+  <!-- ✅ Main Content -->
+  <main>
+    <!-- Map Section -->
+    <div id="map" aria-label="Map showing ride route"></div>
 
-      <div class="ride-request">
-        <input type="text" id="pickup" placeholder="Pickup location" />
-        <input type="text" id="dropoff" placeholder="Drop-off location" />
-        <button id="requestRideBtn">Request Ride</button>
-      </div>
-    <footer class="footer">
-      <p>&copy; 2025 UC Ride. All rights reserved.</p>
-    </footer>
-  </body>
+    <!-- Ride Request Form -->
+    <section class="ride-overlay">
+      <h2>Request a Ride</h2>
+      <input type="text" id="pickup" placeholder="Pickup location" />
+      <input type="text" id="dropoff" placeholder="Drop-off location" />
+      <button id="requestRideBtn">Request Ride</button>
+    </section>
+
+    <!-- Ride Status -->
+    <section class="ride-status">
+      <h2>Status</h2>
+      <p id="statusMessage">
+        At UC Ride, we offer safe, reliable, and affordable transportation services. You can book rides, track your driver in real time, and manage your trips with ease. Transparent pricing and customer support make UC Ride your trusted way to travel.
+      </p>
+    </section>
+
+    <!-- Ride History -->
+    <section class="ride-history">
+      <h2>Ride History</h2>
+      <ul id="rideHistoryList"></ul>
+    </section>
+  </main>
+
+  <!-- ✅ Footer -->
+  <footer>
+    <p>&copy; 2025 UC Ride Nigeria</p>
+  </footer>
+
+  <!-- ✅ JavaScript -->
+  <script type="module" src="uc-ride/src/main.js"></script>
+
+  <!-- ✅ Google Maps API -->
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=6da13628244d1dcf547b59937d76a63d&libraries=places&callback=initMap"
+    async
+    defer>
+  </script>
+
+  <!-- ✅ Paystack -->
+  <script src="uc-ride/src/Paystack Trigger.js"></script>
+</body>
 </html>
